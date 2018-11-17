@@ -18,6 +18,10 @@ header{
   font-family: Merriweather, serif;
 }
 
+header p{
+  font-size: 20px;
+}
+
 #img-div{
   display: flex;
   justify-content: center;
@@ -73,13 +77,8 @@ img{
     "footer";
   }
 
-  header{
-    text-align: center;
-    grid-area: header;
-    background: rgba(255, 255, 255,0.2);
-    color:rgba(0, 0, 0, .8);
-    font-family: Merriweather, serif;
-    font-size:12px;
+  h1{
+    font-size:24px;
   }
 
   #img-div{
