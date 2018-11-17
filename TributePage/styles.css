@@ -1,0 +1,132 @@
+#main{
+  display: grid;
+  width: 100%;
+  background: hsl(26, 11%, 61%);
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "header header"
+  "pic pic"
+  "content content"
+  "footer footer";
+}
+
+header{
+  text-align: center;
+  grid-area: header;
+  background: rgba(255, 255, 255,0.2);
+  color:rgba(0, 0, 0, .8);
+  font-family: Merriweather, serif;
+}
+
+#img-div{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  grid-area:pic;
+  padding:  2% 0 2% 0;
+}
+
+#image {
+  width: 40%;
+  margin: 30px;
+  padding:  2% 0 2% 0;
+}
+
+#img-caption{
+  width:40%;
+  /* padding-top: 10%; */
+  font-family: "Dancing Script", serif;
+  font-size: calc(16px + 6 * ((100vw - 320px) / 680));;
+  padding-left:0px;
+  padding:  15% 0 10% 0;
+}
+
+img{
+  width: 100%;
+  border-radius: 50%;
+}
+
+#tribute-info {
+  grid-area: content;
+  background: rgba(255, 255, 255,0.2);
+  color:rgba(0, 0, 0, .8);
+  font-family: Lato, serif;
+  font-size:18px;
+  padding: 1% 5% 1% 5%;
+  line-height: 1.5em;
+}
+
+@media (max-width: 600px) {
+  #main{
+    display: grid;
+    width: 100%;
+    background: hsl(26, 11%, 61%);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "pic"
+    "pic"
+    "content"
+    "footer";
+  }
+
+  header{
+    text-align: center;
+    grid-area: header;
+    background: rgba(255, 255, 255,0.2);
+    color:rgba(0, 0, 0, .8);
+    font-family: Merriweather, serif;
+    font-size:12px;
+  }
+
+  #img-div{
+    display: flex;
+    justify-content: center;
+    align-content:center;
+    flex-direction: column;
+    grid-area:pic;
+  }
+
+  #image {
+    width: 100%;
+    padding: auto;
+    margin: auto;
+  }
+
+  img{
+    display:block;
+    width: 60%;
+    height: auto;
+    border-radius: 50%;
+    padding: auto;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  #img-caption{
+    width:90%;
+    padding-top: 10px;
+    font-family: "Dancing Script", serif;
+    font-size: 1.1em;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:5px;
+  }
+
+  #tribute-info {
+    grid-area: content;
+    background: rgba(255, 255, 255,0.2);
+    color:rgba(0, 0, 0, .8);
+    font-family: Lato, serif;
+    font-size: 17px;
+    padding: 20px;
+    line-height: 24px
+  }
+
+}
+
+footer{
+  grid-area:footer;
+  padding: 20px;
+  text-align: center;
+}
